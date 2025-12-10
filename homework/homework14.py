@@ -69,17 +69,6 @@ numbers = [5, 2, 3, 8, 4, 1, 2, 7]
 # второй способ
 
 # numbers = [5, 2, 3, 8, 4, 1, 2, 7]
-# evens = sorted([x for x in numbers if x % 2 == 0], reverse=True)
-# ei = 0
-# for i in range(len(numbers)):
-#     if numbers[i] % 2 == 0:
-#         numbers[i] = evens[ei]
-#         ei += 1
-# print("Список после сортировки:", numbers)
-
-
-# третий способ
-# numbers = [5, 2, 3, 8, 4, 1, 2, 7]
 #
 # evens = sorted([x for x in numbers if x % 2 == 0], reverse=True)
 #
@@ -93,7 +82,6 @@ numbers = [5, 2, 3, 8, 4, 1, 2, 7]
 #         ei += 1
 #
 # print("Список после сортировки:", result)
-# [5, 8, 3, 4, 2, 1, 2, 7]
 
 
 
