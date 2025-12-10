@@ -25,18 +25,21 @@ numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
 Список без кратных значений: [1, 10, 19, 20]
 """
 
-# numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
-# result = []
-# userinput = int(input("Введите число для удаления кратных ему элементов: "))
-# for number in numbers:
-#     if number % userinput:
-#         result.append(number)
-# print(f"Список без кратных значений: {result}")
+numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
+userinput = int(input("Введите число для удаления кратных ему элементов: "))
+i = 0
+length = len(numbers)
+while i < length:
+    if numbers[i] % userinput == 0:
+        numbers.pop(i)
+        length -= 1
+    else:
+        i += 1
+print(f"Список без кратных значений: {numbers}")
 
 # вариант 2
 # numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
 # k = int(input("Введите число для удаления кратных ему элементов: "))
-#
 # numbers[:] = [x for x in numbers if x % k != 0]
 # print("Список без кратных значений:", numbers)
 
