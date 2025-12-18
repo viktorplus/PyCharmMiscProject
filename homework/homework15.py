@@ -6,13 +6,42 @@ text_list = ["Hello", "Python Programming", "World", "Advanced Topics", "Simple"
 Пример вывода:
 Обработанный список: ['hello', 'world', 'simple']
 """
+text_list = ["Hello", "Python Programming", "World", "Advanced Topics", "Simple"]
+
+
+for i in range(len(text_list) - 1, -1, -1):  # идём с конца к началу
+    text = text_list[i].lower()
+
+    if " " in text:  # если больше одного слова — удаляем
+        del text_list[i]
+    else:
+        text_list[i] = text  # записываем строку в нижнем регистре
+
+print(f"Обработанный список: {text_list}")
+
+# вариант 2
 
 text_list = ["Hello", "Python Programming", "World", "Advanced Topics", "Simple"]
-for text in text_list:
-    text.lower()
-    if text.count(" "):
-        text_list.remove(text)
-print(f"Обработанный список: {text_list}")
+text_list = ["Hello", "World", "Python Programming", "Advanced Topics", "Simple"]
+
+i = 0
+while i < len(text_list):
+    text = text_list[i].lower()
+    if " " in text:
+        del text_list[i]
+    else:
+        text_list[i] = text
+        i += 1
+print("Обработанный список:", text_list)
+
+
+
+
+
+# вариант 3
+# text_list = ["Hello", "Python Programming", "World", "Advanced Topics", "Simple"]
+# result = [word.lower() for word in text_list if " " not in word]
+# print("Обработанный список:", result)
 
 
 """

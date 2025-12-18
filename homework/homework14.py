@@ -7,12 +7,12 @@ strings = ["apple23", "ban1ana45", "12cherry", "grape3", "blue23berry"]
 Строки с цифрами только в конце: ['apple23', 'grape3']
 """
 
-# strings = ["apple23", "ban1ana45", "12cherry", "grape3", "blue23berry"]
-# result =[]
-# for string in strings:
-#     if string.rstrip("0123456789").isalpha():
-#          result.append(string)
-# print(f"Строки с цифрами только в конце: {result}")
+strings = ["apple23", "ban1ana45", "12cherry", "grape3", "blue23berry"]
+result =[]
+for string in strings:
+    if string.rstrip("0123456789").isalpha():
+         result.append(string)
+print(f"Строки с цифрами только в конце: {result}")
 
 
 """
@@ -36,6 +36,24 @@ while i < length:
     else:
         i += 1
 print(f"Список без кратных значений: {numbers}")
+# 2 способ
+#
+# numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
+#
+# num = int(input("Введите число для удаления кратных ему элементов: "))
+#
+# for value in numbers[:]:
+#     if value % num == 0:
+#         numbers.remove(value)
+#
+# print(f"Список без кратных значений: {numbers}")
+# 3 способ
+# numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
+# num = int(input("Введите число для удаления кратных ему элементов:"))#num = 3
+# for n in range(len(numbers) -1, -1, -1):
+#     if numbers[n] % num == 0:
+#         numbers.pop(n)
+# print(numbers)
 
 # вариант 2
 # numbers = [1, 3, 6, 9, 10, 12, 15, 19, 20]
@@ -82,6 +100,11 @@ numbers = [5, 2, 3, 8, 4, 1, 2, 7]
 #         ei += 1
 #
 # print("Список после сортировки:", result)
+# варинат 3
+numbers = [5, 2, 3, 8, 4, 1, 2, 7]
+even = sorted([n for n in numbers if n % 2 == 0],reverse=True)
+new_numbers = [even.pop(0) if n % 2 == 0 else n for n in numbers]
+print("Список после сортировки:", new_numbers)
 
 
 
