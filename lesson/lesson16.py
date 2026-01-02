@@ -1,7 +1,7 @@
 # numbers = [1, 4, 6, 7, 9]
 # # Возведение каждого элемента numbers в квадрат
-# # squares = [n ** 2 for n in numbers]
-# squares = [numbers.append(numbers[i] ** 2) for i in range(len(numbers))]
+# squares = [n ** 2 for n in numbers]
+# #squares = [numbers.append(numbers[i] ** 2) for i in range(len(numbers))]
 # print(squares)
 # print(numbers)  # Изначальный список останется без изменений
 
@@ -135,7 +135,7 @@
 # # combined = list(zip(names, ages, cities))
 # combined = zip(names, ages, cities)
 # print(combined)
-# print(*list(combined))
+# print(list(combined))
 # print(*list(combined))
 
 # # Объединение нескольких итерируемых объектов разной длины
@@ -166,16 +166,16 @@
 # # Текущий стек
 # print(stack)
 
-from collections import deque
-queue = deque()
-# Добавление элементов в очередь
-queue.append(1)
-queue.append(2)
-queue.append(3)
-queue.append(4)
-# Удаление первых элементов из очереди
-print(queue.popleft())
-print(queue.popleft())
-# Текущая очередь
-print(queue)
+# from collections import deque
+# queue = deque()
+# # Добавление элементов в очередь
+# queue.append(1)
+# queue.append(2)
+# queue.append(3)
+# queue.append(4)
+# # Удаление первых элементов из очереди
+# print(queue.popleft())
+# print(queue.popleft())
+# # Текущая очередь
+# print(queue)
 
