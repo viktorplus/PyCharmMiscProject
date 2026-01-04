@@ -9,7 +9,6 @@ set2 = {2, 3}
 Пример вывода:
 True
 """
-from fontTools.ttLib.tables.otTables import DeltaSetIndexMap
 
 set1 = {1, 2, 3, 4}
 set2 = {2, 3}
@@ -22,6 +21,7 @@ subset = True
 for item in set2:
     if item not in set1:
         subset = False
+        break
 print(subset)
 
 """
