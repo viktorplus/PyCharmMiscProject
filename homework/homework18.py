@@ -28,16 +28,28 @@ dict2 = {"a": 1, "b": 2, "c": 3}
 # Пример вывода:
 # Первый словарь является подмножеством второго.
 d1_in_d2 = True
-for key, value in dict1.items():
-    if key not in dict2 or dict2[key] != value:
+for key in dict1:
+    if key not in dict2 or dict1[key] != dict2[key]:
         d1_in_d2 = False
         break
 
 d2_in_d1 = True
-for key, value in dict2.items():
-    if key not in dict1 or dict1[key] != value:
+for key in dict2:
+    if key not in dict1 or dict2[key] != dict1[key]:
         d2_in_d1 = False
         break
+
+# d1_in_d2 = True
+# for key, value in dict1.items():
+#     if key not in dict2 or dict2[key] != value:
+#         d1_in_d2 = False
+#         break
+#
+# d2_in_d1 = True
+# for key, value in dict2.items():
+#     if key not in dict1 or dict1[key] != value:
+#         d2_in_d1 = False
+#         break
 
 if d1_in_d2 and d2_in_d1:
     print("Словари идентичны")
